@@ -41,9 +41,9 @@ def load_data_fashion_mnist(batch_size, resize=None):
         transform.insert(0, torchvision.transforms.Resize(resize))
         transform = torchvision.transforms.Compose(transform)
     mnist_train = torchvision.datasets.FashionMNIST(
-        root="C:/Users/alecd/Desktop/PythonScripts/d2l/Linear neural networks/Softmax regression/data", train=True, transform=transform, download=True)
+        root="../data", train=True, transform=transform, download=True)
     mnist_test = torchvision.datasets.FashionMNIST(
-        root="C:/Users/alecd/Desktop/PythonScripts/d2l/Linear neural networks/Softmax regression/data", train=False, transform=transform, download=True)
+        root="../data", train=False, transform=transform, download=True)
 
     return (torch.utils.data.DataLoader(mnist_train, batch_size, shuffle=True, num_workers=4),
             torch.utils.data.DataLoader(mnist_test, batch_size, shuffle=True, num_workers=4))
