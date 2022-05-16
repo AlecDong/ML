@@ -6,7 +6,7 @@ import requests
 
 DATA_HUB = dict()
 DATA_URL = 'http://d2l-data.s3-accelerate.amazonaws.com/'
-def download(name, cache_dir=os.path.join('C:/Users/alecd/Desktop/PythonScripts/d2l/Multilayer perceptrons/', 'data')):  #@save
+def download(name, cache_dir=os.path.join('../', 'data')):  #@save
     """Download a file inserted into DATA_HUB, return the local filename."""
     assert name in DATA_HUB, f"{name} does not exist in {DATA_HUB}."
     url, sha1_hash = DATA_HUB[name]
