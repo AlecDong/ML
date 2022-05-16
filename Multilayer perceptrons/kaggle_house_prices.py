@@ -176,7 +176,7 @@ def train_and_pred(train_features, test_features, train_labels, test_data,
     # Reformat it to export to Kaggle
     test_data['SalePrice'] = pd.Series(preds.reshape(1, -1)[0])
     submission = pd.concat([test_data['Id'], test_data['SalePrice']], axis=1)
-    submission.to_csv('C:/Users/alecd/Desktop/PythonScripts/d2l/Multilayer perceptrons/submission.csv', index=False)
+    submission.to_csv('../submission.csv', index=False)
 
 train_and_pred(train_features, test_features, train_labels, test_data,
                num_epochs, lr, weight_decay, batch_size)
