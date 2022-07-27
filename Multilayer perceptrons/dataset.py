@@ -8,7 +8,7 @@ def get_fashion_mnist_labels(labels):
                    'sandal', 'shirt', 'sneaker', 'bag', 'ankle boot']
     return [text_labels[int(i)] for i in labels]
 
-# rint(get_fashion_mnist_labels([mnist_train[i][1] for i in range(len(mnist_train))])[0:10])
+# print(get_fashion_mnist_labels([mnist_train[i][1] for i in range(len(mnist_train))])[0:10])
 
 def show_images(imgs, num_rows, num_cols, titles=None, scale=1.5):
     figsize = (num_cols * scale, num_rows * scale)
